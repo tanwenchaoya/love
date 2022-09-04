@@ -1,7 +1,7 @@
 #!/bin/bash
 
-npm i
-npm run build
+yarn
+yarn build
 rm -rf /home/tanwenchao/*
 mv /tmp/love/dist/* /home/tanwenchao
-# rm -rf /tmp/love
+rm -rf /tmp/love

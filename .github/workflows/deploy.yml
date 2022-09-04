@@ -1,0 +1,27 @@
+name: Publish and Deploy Love
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  build-and-depoly:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy
+      uses: appleboy/ssh-action@master
+      with:
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          key: ${{secrets.KEY}}
+          port: ${{secrets.PORT}}
+          debug: true
+          scripts: |
+            cd /tmp
+            git clone https://github.com/tanwenchaoya/love.git
+            cd /tmp/love
+            chmod _x ./deploy.sh
+            ./deploy.sh
+

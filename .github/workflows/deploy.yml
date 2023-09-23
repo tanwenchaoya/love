@@ -19,7 +19,7 @@ jobs:
           debug: true
           script: |
             cd /tmp
-            git clone git://github.com/tanwenchaoya/love.git
+            git clone https://github.com/tanwenchaoya/love.git
             cd /tmp/love
             chmod +x ./deploy.sh
             ./deploy.sh

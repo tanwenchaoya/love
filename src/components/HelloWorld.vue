@@ -5,7 +5,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
-const loveTwcStr = '12'
+const loveTwcStr = '123'
 const loveTwc = ref<string[]>([])
 setTimeout(() => {
   loveTwc.value.push(loveTwcStr)
